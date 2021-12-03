@@ -6,22 +6,21 @@
    [com.adventofcode.2021.day3 :as sut]))
 
 (def input
-  (->> (util/resources-lines "com/adventofcode/2021/day3.txt")
-       (map sut/parse-row)))
+  (util/resources-lines "com/adventofcode/2021/day3.txt"))
 
 (def sample
-  [[0 0 1 0 0]
-   [1 1 1 1 0]
-   [1 0 1 1 0]
-   [1 0 1 1 1]
-   [1 0 1 0 1]
-   [0 1 1 1 1]
-   [0 0 1 1 1]
-   [1 1 1 0 0]
-   [1 0 0 0 0]
-   [1 1 0 0 1]
-   [0 0 0 1 0]
-   [0 1 0 1 0]])
+  ["00100"
+   "11110"
+   "10110"
+   "10111"
+   "10101"
+   "01111"
+   "00111"
+   "11100"
+   "10000"
+   "11001"
+   "00010"
+   "01010"])
 
 (deftest power-consumption-test
   (is (= 22 (-> sample sut/gamma-rate sut/bits->decimal)))
