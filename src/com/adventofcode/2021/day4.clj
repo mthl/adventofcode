@@ -27,7 +27,7 @@
   [x]
   (and (seq x)
        (every? int? x)
-       (= (count x) 15)))
+       (= (count x) 25)))
 
 (defn bingo?
   [board drawn]
