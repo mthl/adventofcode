@@ -24,6 +24,6 @@
 (deftest syntax-scoring-test
   (is (= 26397 (sut/check-score sample)))
   (is (= 168417 (sut/check-score input)))
-  (is (= 294 (sut/complete-line-score (seq "])}>"))))
+  (is (= 294 (sut/missing-score (seq "])}>"))))
   (is (= 288957 (sut/complete-score sample)))
   (is (= 2802519786 (sut/complete-score input))))

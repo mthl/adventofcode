@@ -35,7 +35,7 @@
       {:error :missing
        :score (->> (reverse stack)
                    (map closing-char)
-                   complete-line-score)}
+                   missing-score)}
       (let [c (first input)]
         (cond
           (contains? closing-char c)
