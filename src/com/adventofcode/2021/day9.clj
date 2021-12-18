@@ -2,25 +2,14 @@
   (:require
    [clojure.set :as set]
    [clojure.string :as str]
-   [clojure.java.io :as io]))
+   [clojure.java.io :as io]
+   [com.adventofcode.util :as util]))
 
 (defrecord Point [x y height])
 
-(def char->int
-  {\0 0
-   \1 1
-   \2 2
-   \3 3
-   \4 4
-   \5 5
-   \6 6
-   \7 7
-   \8 8
-   \9 9})
-
 (defn parse-height-map
   [line]
-  (map char->int (seq line)))
+  (map util/char->int (seq line)))
 
 (defn parse-heights
   [lines]
